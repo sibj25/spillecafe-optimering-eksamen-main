@@ -216,34 +216,6 @@ body {
   position: relative;
 }
 
-.splash-screen {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-  transition: opacity 1s ease;
-}
-
-.logo {
-  width: 100px;
-  opacity: 0;
-  transform: scale(0.8);
-  transition: transform 1.2s ease-out, opacity 1.2s ease-out;
-}
-
-.logo.animate {
-  transform: scale(2.5);
-  opacity: 1;
-}
-
-.splash-screen.fade-out {
-  opacity: 0;
-}
-
 footer {
   position: fixed; /* Footer fastlåses i forhold til viewport */
   bottom: 0; /* Lige ved bunden */
@@ -253,73 +225,6 @@ footer {
   padding: 10px 20px; /* Indvendig margin */
   text-align: center; /* Tekst centreret */
   font-size: 14px; /* Valgfri størrelse */
-}
-
-/*LOCATIONSIDE*/
-
-.location {
-  position: relative;
-  z-index: 1;
-}
-
-.location h2 {
-  color: #000;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.button-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-}
-
-.button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 300px;
-  height: 80px;
-  background: #ebdfd7;
-  color: #000;
-  font-size: 36px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  text-decoration: none;
-  border-radius: 15px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-}
-
-.button:hover {
-  background: #d8cfc3;
-  transform: translateY(-2px);
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  color: black;
-  padding: 10px 20px;
-  text-align: center;
-  font-size: 14px;
-}
-
-/* fade-ind effekt */
-.location {
-  opacity: 0; /* starter skjult */
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.location.fade-in {
-  opacity: 1; /* bliver synlig */
 }
 
 /*SPILGALLERISIDE*/
