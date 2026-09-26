@@ -1,40 +1,6 @@
 "use strict";
 
 /* ==========================
-   INDEX (splash screen)
-   ========================== */
-if (document.querySelector(".splash-screen")) {
-  document.addEventListener("DOMContentLoaded", () => {
-    const logo = document.querySelector(".logo");
-    const splash = document.querySelector(".splash-screen");
-
-    // Logo-animation
-    setTimeout(() => logo.classList.add("animate"), 800);
-
-    // Fade ud efter 2.5 sekunder
-    setTimeout(() => splash.classList.add("fade-out"), 2500);
-
-    // Skift til location.html efter 3.5 sekunder
-    setTimeout(() => {
-      window.location.href = "sites/location.html";
-    }, 3500);
-  });
-}
-
-/* ==========================
-   LOCATION (fade in)
-   ========================== */
-
-if (document.querySelector(".location")) {
-  document.addEventListener("DOMContentLoaded", () => {
-    const locationSection = document.querySelector(".location");
-
-    // Fade ind
-    setTimeout(() => locationSection.classList.add("fade-in"), 100);
-  });
-}
-
-/* ==========================
    SPILGALLERI (navbar, dialog osv.)
    ========================== */
 
@@ -281,23 +247,3 @@ document.addEventListener("DOMContentLoaded", () => {
     .querySelector("#playtime-select")
     .addEventListener("change", filterGames);
 });
-
-//Vestergade spilgalleri
-function showVestergadeGames() {
-  if (!allGames || allGames.length === 0) {
-    return getGames().then(() => {
-      showVestergadeGames();
-      const filtered = allGames.filter(
-        (g) => g.location && g.location.toLowerCase().trim() === "verstergade"
-      );
-      displayGames(filtered);
-      return filtered;
-    });
-  }
-
-  const filtered = allGames.filter(
-    (g) => g.location && g.location.toLowerCase().trim() === "verstergade"
-  );
-  displayGames(filtered);
-  return Promise.resolve(filtered);
-}
