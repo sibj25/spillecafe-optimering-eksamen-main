@@ -238,8 +238,7 @@ footer {
   top: 0;
   left: 0;
   right: 0;
-  background-color: white;
-  border-bottom: 1px solid #eee;
+  background-color: #12492B;
   z-index: 1000;
   height: 56px;
 }
@@ -278,8 +277,6 @@ footer {
   top: 80px;
   left: 0;
   right: 0;
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
   width: 100%;
   box-sizing: border-box;
   z-index: 999;
