@@ -8,14 +8,6 @@ if (document.querySelector(".spilgalleri-titel")) {
   console.log("🎮 Spilgalleri loaded");
 }
 
-// Back button (sikker måde)
-const backBtn = document.querySelector(".back-btn");
-if (backBtn) {
-  backBtn.addEventListener("click", () => {
-    window.location.href = "../index.html";
-  });
-}
-
 // søg
 const searchInput = document.getElementById("search");
 if (searchInput) {
