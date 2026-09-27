@@ -77,6 +77,43 @@
   letter-spacing: -0.11px;
 }
 
+.location-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-family: var(--tag-font-family);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.location-tag p {
+  margin: 0;
+}
+
+.location-vestergade {
+  background: #d7eadf;
+  color: #185c3b;
+}
+
+.location-fredensgade {
+  background: #d9e8f5;
+  color: #1d527a;
+}
+
+.location-aalborg {
+  background: #f8e2c4;
+  color: #8a4f14;
+}
+
+.location-kolding {
+  background: #f2d8d8;
+  color: #853b3b;
+}
+
 /* Øvre card */
 .top-card {
   position: relative;

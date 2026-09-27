@@ -36,6 +36,10 @@ function displayGames(games) {
   }
 }
 
+function getLocationClass(location) {
+  return `location-${location.toLowerCase().replaceAll(" ", "-")}`;
+}
+
 // #4: Render a single game card and add event listeners
 function displayGame(game) {
   const gameList = document.querySelector(".game-list-all");
@@ -64,6 +68,9 @@ function displayGame(game) {
             </div>
             <div class="tags">
                 <p>${game.language}</p>
+            </div>
+            <div class="location-tag ${getLocationClass(game.location)}">
+              <p>${game.location} · Hylde ${game.shelf}</p>
             </div>
         </section>
     </article>
