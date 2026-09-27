@@ -9,7 +9,6 @@
   --description-fontsize-header-2: 16px;
   --description-fontsize-header-3: 12px;
   --description-fontsize-paragraph: 16px;
-  --tag-fontsize: 10px;
   --rating-desciption-fontsize: 6px;
   --rating-card-fontsize: 12px;
   --spilgalleri-titel-fontsize: 120px;
@@ -71,10 +70,10 @@
 
 .tags p {
   font-family: var(--tag-font-family);
-  font-size: var(--tag-fontsize);
+  font-size: 14px;
   font-style: normal;
   font-weight: 700;
-  line-height: 15px;
+  line-height: 20px;
   letter-spacing: -0.11px;
 }
 
@@ -82,7 +81,7 @@
 .top-card {
   position: relative;
   width: 100%;
-  height: 160px;
+  height: 280px;
   border-radius: 16px 16px 0 0;
   overflow: hidden;
 }
@@ -141,7 +140,6 @@
 }
 
 .difficulty p {
-  font-family: var(--tag-font-family);
   font: var(--rating-card-fontsize);
   color: black;
 }
@@ -160,14 +158,14 @@
 /* Nedre card */
 .bottom-card {
   width: 100%;
-  padding: 8px 16px;
+  padding: 20px 24px;
   box-sizing: border-box;
   border-radius: 0 0 16px 16px;
   background: var(--card-background-color);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 4px;
+  gap: 10px;
 }
 
 .difficulty-tag {
@@ -192,14 +190,14 @@
   align-items: flex-start;
   align-self: stretch;
   font-family: var(--header-font-family);
-  font-size: var(--card-fontsize-header-1);
+  font-size: 24px;
   margin: 0;
   padding: 0;
 }
 
 .tags {
   display: flex;
-  padding: 4px 8px;
+  padding: 8px 12px;
   justify-content: center;
   align-items: center;
   gap: 4px;
@@ -500,8 +498,7 @@ main {
 
 .top-card img {
   width: 100%;
-  max-width: 180px;   /* or whatever max width you want */
-  height: 160px;
+  height: 280px;
   object-fit: contain;
   display: block;
   margin: 0 auto;
@@ -524,7 +521,11 @@ main {
   }
 
   .top-card {
-    height: 140px; /* Slightly smaller images on mobile */
+    height: 180px; /* Slightly smaller images on mobile */
+  }
+
+  .top-card img {
+    height: 180px;
   }
 }
 
