@@ -8,12 +8,6 @@ if (document.querySelector(".spilgalleri-titel")) {
   console.log("🎮 Spilgalleri loaded");
 }
 
-// søg
-const searchInput = document.getElementById("search");
-if (searchInput) {
-  searchInput.addEventListener("input", () => displayGames(allGames)); // Adjust as needed
-}
-
 let allGames = [];
 
 // #2: Fetch games from JSON file
@@ -83,20 +77,6 @@ function displayGame(game) {
   });
 }
 
-// #6: Vis game details (Session 3 version - bliver erstattet med modal i Del 2)
-function showGameDetails(game) {
-  alert(`
-🎬 ${games.title} (${game.year})
-
-🎭 Genre: ${games.genre.join(", ")}
-⭐ Rating: ${games.rating}
-🎥 Director: ${games.director}
-👥 Actors: ${games.actors.join(", ")}
-
-📝 ${games.description}
-  `);
-}
-
 //Game Card Dialog
 function getDifficultyClass(difficulty) {
   switch (difficulty.toLowerCase()) {
@@ -148,9 +128,6 @@ document.querySelector("#close-dialog").addEventListener("click", () => {
 });
 
 // Dropdown-menu //// Åbn/luk dropdowns
-
-// Load games on page load
-document.addEventListener("DOMContentLoaded", getGames);
 
 // FILTRERINGSSYSTEM //
 
