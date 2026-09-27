@@ -53,7 +53,7 @@ function displayGame(game) {
             class="game-image" />
             <div class="age-tag">${game.age}</div>
             <div class="rating-tag">${game.rating}</div>
-            <div class="difficulty-tag">${game.difficulty}</div>
+            <div class="difficulty-tag ${getDifficultyClass(game.difficulty)}">${game.difficulty}</div>
         </section>
         <section class="bottom-card">
             <h2 class="card-titel">${game.title}</h2>
@@ -86,7 +86,7 @@ function displayGame(game) {
 
 //Game Card Dialog
 function getDifficultyClass(difficulty) {
-  switch (difficulty.toLowerCase()) {
+  switch (difficulty.trim().toLowerCase()) {
     case "let":
       return "difficulty-easy";
     case "mellem":
