@@ -32,6 +32,13 @@
 }
 
 
+.brand-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  display: block;
+}
+
 .spilgalleri-titel {
   font-family: var(--header-font-family);
   font-size: var(--spilgalleri-titel-fontsize);
