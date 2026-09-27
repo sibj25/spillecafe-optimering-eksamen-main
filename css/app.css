@@ -54,6 +54,18 @@
   background: var(--card-background-color);
   box-shadow: var(--shadow);
   z-index: 1;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.game-card:hover,
+.game-card:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
+}
+
+.game-card:hover .game-image,
+.game-card:focus-visible .game-image {
+  transform: scale(1.03);
 }
 
 /* Tags */
