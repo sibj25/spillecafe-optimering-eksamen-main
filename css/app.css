@@ -214,6 +214,75 @@ body {
   align-items: center;
   background-color: #12492B;
   position: relative;
+  font-family: var(--paragraph-font-family), sans-serif;
+}
+
+.landing-page {
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.home-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 12px;
+  color: #ffffff;
+}
+
+.home-screen .logo {
+  width: min(260px, 70vw);
+  height: auto;
+  display: block;
+}
+
+.home-screen h1 {
+  margin: 0;
+  font-family: var(--header-font-family), sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.home-screen p {
+  margin: 0;
+  font-size: 1rem;
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button.primary {
+  background: #f4d35e;
+  color: #1b1b1b;
+}
+
+.button.secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 footer {
