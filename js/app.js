@@ -46,32 +46,36 @@ function displayGame(game) {
   if (!gameList) return;
 
   const gameHTML = `
-    <article class="game-card" tabindex="0" data-id="${game.id}">
+    <article class="game-card" tabindex="0" data-id="${game.id}" aria-label="${game.title}">
         <section class="top-card">
             <img src="${game.image}" 
             alt="${game.title}" 
             class="game-image" />
-            <div class="age-tag">${game.age}</div>
-            <div class="rating-tag">${game.rating}</div>
-            <div class="difficulty-tag ${getDifficultyClass(game.difficulty)}">${game.difficulty}</div>
+            <div class="age-tag" aria-label="Alder: ${game.age} år" title="Alder: ${game.age} år">${game.age}</div>
+            <div class="rating-tag" aria-label="Bedømmelse: ${game.rating} ud af 5" title="Bedømmelse: ${game.rating} ud af 5">${game.rating}</div>
+            <div class="difficulty-tag ${getDifficultyClass(game.difficulty)}" aria-label="Sværhedsgrad: ${game.difficulty}" title="Sværhedsgrad: ${game.difficulty}">${game.difficulty}</div>
         </section>
         <section class="bottom-card">
             <h2 class="card-titel">${game.title}</h2>
             <div class="tags">
+                <span class="card-label">Genre:</span>
                 <p>${game.genre}</p>
             </div>
             <div class="tags">
-                <p>${game.playtime}</p>
+                <span class="card-label">Spilletid:</span>
+                <p>${game.playtime} min</p>
             </div>
             <div class="tags">
+                <span class="card-label">Spillere:</span>
                 <p>${game.players.min}-${game.players.max}</p>
             </div>
             <div class="tags">
+                <span class="card-label">Sprog:</span>
                 <p>${game.language}</p>
             </div>
-            <div class="location-tag ${getLocationClass(game.location)}">
-              <p>${game.location} · Hylde ${game.shelf}</p>
-            </div>
+            <button class="location-tag ${getLocationClass(game.location)}" type="button" aria-label="${game.location}, hylde ${game.shelf}">
+              ${game.location} · ${game.shelf}
+            </button>
         </section>
     </article>
   `;

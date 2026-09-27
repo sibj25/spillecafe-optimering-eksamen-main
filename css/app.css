@@ -100,6 +100,8 @@
   font-family: var(--tag-font-family);
   font-size: 14px;
   font-weight: 700;
+  border: none;
+  cursor: pointer;
 }
 
 .location-tag p {
