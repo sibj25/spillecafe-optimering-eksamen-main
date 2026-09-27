@@ -160,7 +160,6 @@ function filterGames() {
     .querySelector("#search-input")
     .value.toLowerCase();
   const difficultyValue = document.querySelector("#difficulty-select").value;
-  const ageValue = document.querySelector("#age-select").value;
   const genreValue = document.querySelector("#genre-select").value;
   const playtimeValue = document.querySelector("#playtime-select").value;
 
@@ -182,16 +181,6 @@ function filterGames() {
     filteredGames = filteredGames.filter((game) => {
       // Eksakt match på sværhedsgrad
       return game.difficulty === difficultyValue;
-    });
-  }
-
-  // FILTER 3: Alder - filtrer på aldersgrænse
-  if (ageValue !== "all") {
-    // Kun filtrer hvis ikke "all" er valgt
-    const filterAge = Number(ageValue) || 0;
-    filteredGames = filteredGames.filter((game) => {
-      // Check om spillets alder er mindre eller lig filterens alder
-      return game.age <= filterAge;
     });
   }
 
@@ -222,20 +211,30 @@ function filterGames() {
 document.addEventListener("DOMContentLoaded", () => {
   getGames();
 
+  const filterToggle = document.querySelector(".filter-toggle");
+  const filterPanel = document.getElementById("filter-panel");
+
+  if (filterToggle && filterPanel) {
+    filterToggle.addEventListener("click", () => {
+      const isOpen = filterPanel.hidden === false;
+      filterPanel.hidden = isOpen;
+      filterToggle.setAttribute("aria-expanded", String(!isOpen));
+    });
+  }
+
   // Event listener til søgning
-  document
-    .querySelector("#search-input")
-    .addEventListener("input", filterGames);
+  const searchInput = document.querySelector("#search-input");
+  if (searchInput) {
+    searchInput.addEventListener("input", filterGames);
+  }
 
   // Event listeners til alle filter-dropdowns
-  document
-    .querySelector("#difficulty-select")
-    .addEventListener("change", filterGames);
-  document.querySelector("#age-select").addEventListener("change", filterGames);
-  document
-    .querySelector("#genre-select")
-    .addEventListener("change", filterGames);
-  document
-    .querySelector("#playtime-select")
-    .addEventListener("change", filterGames);
+  const difficultySelect = document.querySelector("#difficulty-select");
+  const genreSelect = document.querySelector("#genre-select");
+  const playtimeSelect = document.querySelector("#playtime-select");
+
+  if (difficultySelect) difficultySelect.addEventListener("change", filterGames);
+  if (genreSelect) genreSelect.addEventListener("change", filterGames);
+  if (playtimeSelect) playtimeSelect.addEventListener("change", filterGames);
+
 });

@@ -33,61 +33,54 @@
     </header>
 
     <section class="filter-bar" aria-label="Filtre til spilgalleri">
-      <div class="filter-group">
-        <label for="difficulty-select">Sværhedsgrad</label>
-        <select id="difficulty-select" name="difficulty">
-          <option value="all">Alle</option>
-          <option value="Let">Let</option>
-          <option value="Mellem">Mellem</option>
-          <option value="Svær">Svær</option>
-        </select>
-      </div>
+      <div class="filter-dropdown">
+        <button class="filter-toggle" type="button" aria-expanded="false" aria-controls="filter-panel">
+          <span>Filtre</span>
+        </button>
 
-      <div class="filter-group">
-        <label for="age-select">Alder</label>
-        <select id="age-select" name="age">
-          <option value="all">Alle</option>
-          <option value="6">6+</option>
-          <option value="7">7+</option>
-          <option value="8">8+</option>
-          <option value="10">10+</option>
-          <option value="18">18+</option>
-        </select>
-      </div>
+        <div id="filter-panel" class="filter-panel" hidden>
+          <div class="filter-group">
+            <select id="difficulty-select" name="difficulty" aria-label="Sværhedsgrad">
+              <option value="all">Sværhedsgrader</option>
+              <option value="Let">Let</option>
+              <option value="Mellem">Mellem</option>
+              <option value="Svær">Svær</option>
+            </select>
+          </div>
 
-      <div class="filter-group">
-        <label for="genre-select">Genre</label>
-        <select id="genre-select" name="genre">
-          <option value="all">Alle</option>
-          <option value="Party">Party</option>
-          <option value="Mysterie">Mysterie</option>
-          <option value="Familie">Børne-/Familie</option>
-          <option value="Deck-builder">Deck-builder</option>
-          <option value="Quiz">Quiz</option>
-          <option value="Terning">Terning</option>
-          <option value="Kooperativt">Kooperativt</option>
-          <option value="Abstract">Abstract</option>
-          <option value="Ordspil">Ordspil</option>
-          <option value="Kortspil">Kortspil</option>
-          <option value="Strategi">Strategi</option>
-          <option value="Fliselægning">Fliselægning</option>
-        </select>
-      </div>
+          <div class="filter-group">
+            <select id="genre-select" name="genre" aria-label="Genre">
+              <option value="all">Genrer</option>
+              <option value="Party">Party</option>
+              <option value="Mysterie">Mysterie</option>
+              <option value="Familie">Børne-/Familie</option>
+              <option value="Deck-builder">Deck-builder</option>
+              <option value="Quiz">Quiz</option>
+              <option value="Terning">Terning</option>
+              <option value="Kooperativt">Kooperativt</option>
+              <option value="Abstract">Abstract</option>
+              <option value="Ordspil">Ordspil</option>
+              <option value="Kortspil">Kortspil</option>
+              <option value="Strategi">Strategi</option>
+              <option value="Fliselægning">Fliselægning</option>
+            </select>
+          </div>
 
-      <div class="filter-group">
-        <label for="playtime-select">Spilletid</label>
-        <select id="playtime-select" name="playtime">
-          <option value="all">Alle</option>
-          <option value="15">15+ min</option>
-          <option value="20">20+ min</option>
-          <option value="30">30+ min</option>
-          <option value="35">35+ min</option>
-          <option value="40">40+ min</option>
-          <option value="45">45+ min</option>
-          <option value="60">60+ min</option>
-          <option value="75">75+ min</option>
-          <option value="120">120+ min</option>
-        </select>
+          <div class="filter-group">
+            <select id="playtime-select" name="playtime" aria-label="Spilletid">
+              <option value="all">Spilletider</option>
+              <option value="15">15+ min</option>
+              <option value="20">20+ min</option>
+              <option value="30">30+ min</option>
+              <option value="35">35+ min</option>
+              <option value="40">40+ min</option>
+              <option value="45">45+ min</option>
+              <option value="60">60+ min</option>
+              <option value="75">75+ min</option>
+              <option value="120">120+ min</option>
+            </select>
+          </div>
+        </div>
       </div>
     </section>
 
