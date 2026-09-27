@@ -341,18 +341,18 @@ body:has(.page-header) {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 12px;
-  padding: 12px 16px;
+  padding: 12px 60px;
   width: 100%;
   box-sizing: border-box;
 }
 
 .filter-dropdown {
   position: relative;
-  width: min(430px, 90vw);
+  width: min(600px, 90vw);
 }
 
 .filter-bar .search-group {
-  width: min(430px, 90vw);
+  width: min(600px, 90vw);
 }
 
 .search-group input {
