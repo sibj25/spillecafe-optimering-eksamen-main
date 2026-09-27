@@ -302,20 +302,23 @@ footer {
 }
 
 /*SPILGALLERISIDE*/
-/*Navbar*/
-.navbar {
+/* Galleri-header i stedet for navbar */
+.page-header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 40px;
-  padding: 12px 16px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  padding: 0 40px 12px;
   background-color: #12492B;
-  z-index: 1000;
-  height: 56px;
+  min-height: 56px;
+  height: auto;
+  box-sizing: border-box;
+}
+
+body:has(.page-header) {
+  display: block;
+  height: auto;
+  min-height: 100vh;
 }
 
 .title {
@@ -335,17 +338,12 @@ footer {
 .filter-bar {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 12px;
   padding: 12px 16px;
-  position: fixed;
-  top: 180px;
-  left: 0;
-  right: 0;
   width: 100%;
   box-sizing: border-box;
-  z-index: 999;
 }
 
 .filter-dropdown {
@@ -421,7 +419,7 @@ footer {
 }
 
 .main-content {
-  padding-top: 300px;
+  padding-top: 24px;
   padding-bottom: 80px;
   margin-top: auto;
   display: flex;
