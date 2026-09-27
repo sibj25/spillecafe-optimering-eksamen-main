@@ -33,10 +33,11 @@
 
 
 .brand-logo {
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
+  width: 200px;
+  max-width: 100%;
+  height: auto;
   display: block;
+  flex-shrink: 0;
 }
 
 .spilgalleri-titel {
@@ -185,8 +186,6 @@
   font-weight: bold;
   text-transform: capitalize;
 }
-
-
 
 .card-titel {
   display: flex;
@@ -473,6 +472,26 @@ main {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 16px;
   }
+
+  @media (max-width: 768px) {
+  .brand-logo {
+    width: 56px;
+  }
+
+  .spilgalleri-titel {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-logo {
+    width: 48px;
+  }
+
+  .spilgalleri-titel {
+    font-size: 16px;
+  }
+}
 
 
 /* =====================
