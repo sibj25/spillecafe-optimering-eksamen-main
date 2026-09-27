@@ -12,7 +12,7 @@
   --tag-fontsize: 10px;
   --rating-desciption-fontsize: 6px;
   --rating-card-fontsize: 12px;
-  --spilgalleri-titel-fontsize: 20px;
+  --spilgalleri-titel-fontsize: 120px;
   --spilgalleri-header-2-fontsize: 17px;
 
   /* Color styles */
@@ -38,8 +38,10 @@
 }
 
 .spilgalleri-titel {
-  font-family: var(--header-font-family);
+  font-family: "Rubik", sans-serif;
   font-size: var(--spilgalleri-titel-fontsize);
+  font-weight: 800;
+  color: #ffffff;
 }
 
 /* Card in general */
@@ -304,7 +306,8 @@ footer {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 40px;
   padding: 12px 16px;
   position: fixed;
   top: 0;
