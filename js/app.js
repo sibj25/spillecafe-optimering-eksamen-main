@@ -196,7 +196,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // Event listener til søgning
   const searchInput = document.querySelector("#search-input");
   if (searchInput) {
-    searchInput.addEventListener("input", filterGames);
+    searchInput.addEventListener("input", () => {
+      document.querySelector("#difficulty-select").value = "all";
+      document.querySelector("#genre-select").value = "all";
+      document.querySelector("#playtime-select").value = "all";
+      filterGames();
+    });
   }
 
   // Event listeners til alle filter-dropdowns
