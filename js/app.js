@@ -12,7 +12,7 @@ let allGames = [];
 
 // #2: Fetch games from JSON file
 async function getGames() {
-  const response = await fetch("../data/games.json");
+  const response = await fetch("./data/games.json");
   allGames = await response.json();
   console.log("📁 Games loaded:", allGames.length);
   // populateCategoryDropdown(); // Remove or comment out if not implemented
