@@ -46,10 +46,12 @@ function displayGame(game) {
   if (!gameList) return;
 
   const gameHTML = `
-    <article class="game-card" tabindex="0" data-id="${game.id}" aria-label="${game.title}">
+    <article class="game-card" tabindex="0" data-id="${game.id}" aria-labelledby="screenreader-title-${game.id}">
+      <h2 id="screenreader-title-${game.id}" class="sr-only">${game.title}</h2>
         <section class="top-card">
             <img src="${game.image}" 
-            alt="${game.title}" 
+            alt="" 
+            aria-hidden="true"
             class="game-image" />
             <div class="age-tag" aria-label="Alder: ${game.age} år" title="Alder: ${game.age} år">${game.age}</div>
             <div class="rating-tag" aria-label="Bedømmelse: ${game.rating} ud af 5" title="Bedømmelse: ${game.rating} ud af 5">${game.rating}</div>
@@ -85,6 +87,13 @@ function displayGame(game) {
   const newCard = gameList.lastElementChild;
   newCard.addEventListener("click", function () {
     showGameModal(game.id);
+  });
+
+  newCard.addEventListener("keydown", function (event) {
+    if ((event.key === "Enter" || event.key === " ") && event.target === newCard) {
+      event.preventDefault();
+      showGameModal(game.id);
+    }
   });
 }
 
