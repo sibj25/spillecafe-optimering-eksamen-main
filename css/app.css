@@ -9,8 +9,6 @@
   --description-fontsize-header-2: 16px;
   --description-fontsize-header-3: 12px;
   --description-fontsize-paragraph: 16px;
-  --rating-desciption-fontsize: 6px;
-  --rating-card-fontsize: 12px;
   --spilgalleri-titel-fontsize: 120px;
   --spilgalleri-header-2-fontsize: 17px;
 
@@ -18,13 +16,6 @@
   --card-background-color: #fafafa;
   --tag-background-color: #f8f8f8;
   --tag-border-color: #e0e0e0;
-  --rating-yellow-gradient: linear-gradient(
-    to bottom,
-    #e6cd53 16%,
-    #ffe35a 51%,
-    #e6cd53 88%
-  );
-
   /* effect styles */
   --shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
   --transition: 250ms ease;
@@ -135,64 +126,6 @@
   height: 280px;
   border-radius: 16px 16px 0 0;
   overflow: hidden;
-}
-
-/* Rating på billede */
-.rating {
-  display: inline-flex;
-  padding: 4px 8px 4px 4px;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  border-radius: 0 16px 16px 0;
-  background: var(--rating-yellow-gradient);
-  box-shadow: var(--shadow);
-  z-index: 20;
-}
-
-.rating p {
-  font-family: var(--tag-font-family);
-  font-size: var(--rating-card-fontsize);
-  color: black;
-}
-
-/* Aldersgrænse på billede */
-.age {
-  display: inline-flex;
-  padding: 4px 12px 4px 8px;
-  justify-content: flex-end;
-  align-items: flex-start;
-  gap: 8px;
-  border-radius: 16px 0 0 16px;
-  background: var(--card-background-color);
-  z-index: 20;
-}
-
-.age p {
-  font-family: var(--tag-font-family);
-  font: var(--rating-card-fontsize);
-  color: black;
-}
-
-/* Sværhedsgrad på billede */
-.difficulty {
-  display: inline-flex;
-  padding: 4px 8px 4px 4px;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  border-radius: 0 16px 16px 0;
-  background: var(--card-background-color);
-  box-shadow: var(--shadow);
-  z-index: 20;
-  position: absolute;
-  bottom: 135px;
-  left: 0;
-}
-
-.difficulty p {
-  font: var(--rating-card-fontsize);
-  color: black;
 }
 
 /* Billede af brætspil */
@@ -370,19 +303,6 @@ body:has(.page-header) {
   min-height: 100vh;
 }
 
-.title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-.search-btn {
-  background: none;
-  border: none;
-  font-size: 1.3rem;
-  cursor: pointer;
-}
-
 /* Filter bar */
 .filter-bar {
   display: flex;
@@ -489,17 +409,8 @@ body:has(.page-header) {
   justify-content: center;
 }
 
-.dropbtn {
-  background-color: #e9dfd7;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 14px;
-  font-size: 0.95rem;
-  cursor: pointer;
-}
-
 .filter-group select {
-  background-color: #e9dfd7;
+  background-color: #efefef;
   border: none;
   appearance: none;
   border-radius: 20px;
@@ -522,11 +433,6 @@ body:has(.page-header) {
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-}
-
-/* Show dropdown on click */
-.show {
-  display: block;
 }
 
 /*Vestergade & alle spil sektion*/
