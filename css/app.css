@@ -395,6 +395,16 @@ body:has(.page-header) {
   z-index: 10;
   width: 100%;
   box-sizing: border-box;
+  padding-bottom: 20px;
+}
+
+.filter-bar::after {
+  content: "";
+  position: absolute;
+  left: 60px;
+  bottom: -12px;
+  width: calc(100% - 120px);
+  border-bottom: 3px solid #d8d0ca;
 }
 
 .filter-dropdown {
