@@ -405,7 +405,7 @@ body:has(.page-header) {
   bottom: -12px;
   width: calc(100% - 120px);
   border-bottom: 3px solid #d8d0ca;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .filter-dropdown {
