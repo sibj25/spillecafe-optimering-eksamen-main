@@ -203,9 +203,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const difficultySelect = document.querySelector("#difficulty-select");
   const genreSelect = document.querySelector("#genre-select");
   const playtimeSelect = document.querySelector("#playtime-select");
+  const clearFiltersButton = document.querySelector("#clear-filters");
 
   if (difficultySelect) difficultySelect.addEventListener("change", filterGames);
   if (genreSelect) genreSelect.addEventListener("change", filterGames);
   if (playtimeSelect) playtimeSelect.addEventListener("change", filterGames);
+
+  if (clearFiltersButton) {
+    clearFiltersButton.addEventListener("click", () => {
+      searchInput.value = "";
+      difficultySelect.value = "all";
+      genreSelect.value = "all";
+      playtimeSelect.value = "all";
+      filterGames();
+    });
+  }
 
 });

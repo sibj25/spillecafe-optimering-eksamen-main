@@ -510,6 +510,20 @@ body:has(.page-header) {
   box-sizing: border-box;
 }
 
+.clear-filters {
+  width: 100%;
+  min-height: 100%;
+  border: 1px solid #d8d0ca;
+  border-radius: 20px;
+  background: #ff1616;
+  color: #ffffff;
+  padding: 8px 12px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 /* Show dropdown on click */
 .show {
   display: block;
