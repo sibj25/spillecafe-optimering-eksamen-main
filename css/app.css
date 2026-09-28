@@ -447,36 +447,6 @@ body:has(.page-header) {
   cursor: pointer;
 }
 
-/*Vestergade & alle spil sektion*/
-
-/* --- CONTAINER --- */
-main {
-  padding-top: 0;
-  position: relative;
-}
-
-/* --- SEKTIONER --- */
-.location-section {
-  margin-bottom: 18px;
-  display: flex;
-  justify-content: space-between;
-  padding: 24px 16px;
-  flex-direction: column;
-  gap: 6px
-  
-}
-
-.location-header {
-  font-family: var(--header-font-family);
-  font-size: 28px;
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 16px;
-  flex-direction: row
-}
-
-
-
 /* --- ALLE SPIL (grid) --- */
 .game-list-all {
   display: grid;
@@ -497,81 +467,6 @@ main {
   display: block;
   margin: 0 auto;
   background: #fff;   /* optional: gives a background if image is not full */
-}
-
-/* --- RESPONSIVE --- */
-
-/*@media (max-width: 768px) {
-  main {
-    margin: 20px;
-    padding: 20px;
-  }*/
-
-  @media screen and (max-width: 768px) {
-  .game-list-all {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-    gap: 16px;
-    padding: 12px;
-  }
-
-  .top-card {
-    height: 180px; /* Slightly smaller images on mobile */
-  }
-
-  .top-card img {
-    height: 180px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .game-list-all {
-    padding: 8px;
-  }
-}
-
-  .location-section h2 {
-    font-size: 22px;
-  }
-
-  .game-scroll .game-card {
-    width: 180px;
-  }
-
-  .game-list-all {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 16px;
-  }
-
-  @media (max-width: 768px) {
-  .brand-logo {
-    width: 56px;
-  }
-
-  .spilgalleri-titel {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 480px) {
-  .brand-logo {
-    width: 48px;
-  }
-
-  .spilgalleri-titel {
-    font-size: 16px;
-  }
-}
-
-
-/* =====================
-   SPIL GRID & CARDS
-   ===================== */
-#game-list-all {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(1.5rem, 3vw, 2.5rem);
-  padding: 10rem 0;
 }
 
 /* ====== DIALOG ====== */
@@ -602,27 +497,10 @@ main {
   
 }
 
-#dialog-content img {
-  width: 100%;
-  height: 350px;
-  object-fit: contain;
-  
-}
-
 .dialog-details {
   padding: 20px;
   display: flex;
   flex-direction: column;
-}
-
-.modal{
-  margin-top: 100px;
-}
-
-.dialog-details h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  font-family: var(--header-font-family);
 }
 
 .dialog-details p {
@@ -636,21 +514,62 @@ main {
   line-height: 1.6;
 }
 
-/*Sværhedgrads knap på Dialog*/
+@media (max-width: 768px) {
+  .page-header {
+    gap: 12px;
+    padding: 0 16px 12px;
+  }
 
-.dialog-tags {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
-}
+  .brand-logo {
+    width: min(25vw, 120px);
+  }
 
-.dialog-tags .difficulty-tag {
-  padding: 4px 12px;
-  border-radius: 16px;
-  font-family: var(--tag-font-family);
-  font-size: var(--tag-fontsize);
-  font-weight: bold;
-  color: white;
+  .spilgalleri-titel {
+    font-size: clamp(1.5rem, 8vw, 3rem);
+    line-height: 1;
+  }
+
+  .filter-bar {
+    padding: 12px 16px 20px;
+  }
+
+  .filter-bar::after {
+    left: 16px;
+    width: calc(100% - 32px);
+  }
+
+  .filter-dropdown,
+  .filter-bar .search-group {
+    width: 100%;
+  }
+
+  .filter-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .game-list-all {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .top-card,
+  .top-card img {
+    height: min(62vw, 280px);
+  }
+
+  .bottom-card {
+    padding: 16px;
+  }
+
+  .card-titel {
+    font-size: 20px;
+  }
+
+  #game-dialog {
+    width: calc(100% - 32px);
+    padding: 12px;
+  }
 }
 
 /* Difficulty colors */
