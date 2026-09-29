@@ -53,12 +53,12 @@ function displayGame(game) {
             alt="" 
             aria-hidden="true"
             class="game-image" />
-            <div class="age-tag" aria-label="Alder: ${game.age} år" title="Alder: ${game.age} år">${game.age}</div>
-            <div class="rating-tag" aria-label="Bedømmelse: ${game.rating} ud af 5" title="Bedømmelse: ${game.rating} ud af 5">${game.rating}</div>
+            <div class="age-tag" aria-hidden="true" title="Alder: ${game.age} år">${game.age}</div>
+            <div class="rating-tag" aria-hidden="true" title="Bedømmelse: ${game.rating} ud af 5">${game.rating}</div>
             <div class="difficulty-tag ${getDifficultyClass(game.difficulty)}" aria-label="Sværhedsgrad: ${game.difficulty}" title="Sværhedsgrad: ${game.difficulty}">${game.difficulty}</div>
         </section>
         <section class="bottom-card">
-            <h2 class="card-titel">${game.title}</h2>
+            <h2 class="card-titel" aria-hidden="true">${game.title}</h2>
             <div class="tags">
                 <span class="card-label">Genre:</span>
                 <p>${game.genre}</p>
