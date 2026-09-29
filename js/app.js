@@ -53,8 +53,6 @@ function displayGame(game) {
             alt="" 
             aria-hidden="true"
             class="game-image" />
-            <div class="age-tag" aria-hidden="true" title="Alder: ${game.age} år">${game.age}</div>
-            <div class="rating-tag" aria-hidden="true" title="Bedømmelse: ${game.rating} ud af 5">${game.rating}</div>
             <div class="difficulty-tag ${getDifficultyClass(game.difficulty)}" aria-label="Sværhedsgrad: ${game.difficulty}" title="Sværhedsgrad: ${game.difficulty}">${game.difficulty}</div>
         </section>
         <section class="bottom-card">
